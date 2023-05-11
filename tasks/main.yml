@@ -45,6 +45,9 @@
     - ansible_distribution == "Debian"
     - ansible_distribution_release == "stretch"
 
+# Amazon Linux 2023 does not (yet?) offer docker-compose or the
+# Docker compose plugin:
+# https://github.com/amazonlinux/amazon-linux-2023/issues/186
 - name: Install docker compose plugin V2 (Amazon Linux)
   ansible.builtin.include_tasks:
     file: compose_Amazon.yml
